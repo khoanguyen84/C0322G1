@@ -1,5 +1,5 @@
 # Lưu trữ mã nguồn của lớp C0322G1
-## Modul1 1: Bootcamp Preparation
+## Module 1: Bootcamp Preparation
 1. Bài 4: Git & HTML
 Để cộng tác với nhau trong 1 dự án thì:
 + Bước 1: tại remote repo -> chọn tab Settings
