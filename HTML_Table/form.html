@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form{
+            width: 400px;
+            margin: 0px auto;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com/search?" method="get">
+        <table>
+            <tr>
+                <td>Personal ID</td>
+                <td>
+                    <input placeholder="Personal ID" type="number" min="10" max="20" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Introduction</td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <input type="range" min="500" max="1000">
+                </td>
+            </tr>
+            <tr>
+                <td>Telephone</td>
+                <td>
+                    <input style="padding: 20px 5px;" type="tel" placeholder="Telephone....">
+                </td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td>
+                    <input type="url" name="" id="" value="https://andy.codegym.vn/" required readonly disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="color">
+                    <input type="hidden" name="hidden" id="" value="CGH">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td>
+                    <input type="file" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td>
+                    <input type="image" src="images/7.-Java.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="keyword">keyword</label>
+                </td>
+                <td>
+                    <input type="search" name="q" id="keyword">
+                    <input size="100" type="text" name="q" id="keyword">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="keyword">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="pw" id="pw">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Dob</label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dob" min="2022-01-01" max="2022-12-31">
+                    <input type="time">
+                    <br>
+                    <input type="datetime-local">
+                    <br>
+                    <input type="week">
+                    <br>
+                    <input type="month">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" checked="true" name="gender" id=""> Male
+                    <input type="radio" name="gender" id=""> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox" checked="true"> Football
+                    <input type="checkbox"> Walking
+                    <input type="checkbox"> Swiming
+                </td>
+            </tr>
+            <tr>
+                <td>Provinces</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Thừa thiên Huế</option>
+                        <option value="">Đà Nẵng</option>
+                        <option value="">Quảng Bình</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Search</button>
+                    <input type="button" value="Button">
+                    <input type="reset" value="Cancel">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+        
