@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Overview</title>
+</head>
+
+<body>
+    <!-- 
+        1. Hiểu ý nghĩa của JS
+        2. "Sức mạnh" JS
+        3. Cách nhúng (mix) JS vào HTML
+        + cách 1: nhúng trực tiếp vào element (inline)
+        + cách 2: viết trong thẻ script (internal)
+        + cách 3: viết trong file .js (external)
+     -->
+
+    <button onclick="window.location.href ='https://www.google.com/' " onmouseover="
+                        this.innerText = new Date();
+                        this.style.color = 'red';
+                        document.getElementsByTagName('span')[0].innerText = new Date();
+                    " onmouseout="
+                        this.innerText='Hover to show current datetime';
+                        this.style.color = 'black'
+                    ">
+        Hover to show current datetime
+    </button>
+    <span></span>
+    <br>
+    <button onclick="document.getElementById('light').src = 
+            'https://www.w3schools.com/js/pic_bulbon.gif'">
+        Turn On
+    </button>
+        <!-- <img 
+            id="light" 
+            src="https://www.w3schools.com/js/pic_bulboff.gif" 
+            alt=""
+            onmouseover="this.src='https://www.w3schools.com/js/pic_bulbon.gif'"
+            onmouseout="this.src='https://www.w3schools.com/js/pic_bulboff.gif'"
+        > -->
+        <img 
+            id="light" 
+            src="https://www.w3schools.com/js/pic_bulboff.gif" 
+            alt=""
+            onmouseover="turnOn()"
+            onmouseout="turnOff()"
+        >
+    <button 
+        onclick="document.getElementById('light').src = 
+        'https://www.w3schools.com/js/pic_bulboff.gif'"
+    >
+        Turn Off
+    </button>
+
+    <script>
+        // function turnOn(){
+        //     document.getElementById('light').src='https://www.w3schools.com/js/pic_bulbon.gif'
+        //     document.getElementById('light').style.width = "120px"
+        //     document.getElementById('light').style.height = "200px"
+        // }
+        // function turnOff(){
+        //     document.getElementById('light').src='https://www.w3schools.com/js/pic_bulboff.gif'
+        //     document.getElementById('light').style.width = "100px"
+        //     document.getElementById('light').style.height = "180px"
+        // }
+    </script>
+
+    <script src="light.js"></script>
+</body>
+
+</html>
