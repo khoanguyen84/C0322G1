@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <style>
+        h2 {
+            font-weight: normal;
+            border: 10px dotted red;
+            width: 200px;
+        }
+
+        h1{
+            color: red;
+            background-color: green;
+            font-style: italic;
+            text-decoration: underline;
+            width: 300px;
+            padding: 20px 10px;
+            border-radius: 30px;
+            background-image: linear-gradient(to right, green, yellow, orange);
+        }
+        body{
+            /* background-color: violet; */
+        }
+    </style>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <p>
+        ax<sup>2</sup> + bx + c = 0
+    </p>
+    <p>
+        H<sub>2</sub>O
+    </p>
+    <div></div>
+    <input type="text">
+    <br>
+    <input type="number">
+    <br>
+    <input type="text">
+    <br>
+    <input type="password">
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+    Fullname: <input type="text">
+    <br>
+    <input type="checkbox">
+    <!-- 
+        các cách nhúng CSS vào HTML
+        Cách 1: Inline style (viết bên trong thuộc tính style của element)
+        Cách 2: Internal Style (viết bên trong thẻ style, thẻ này đặt trong thẻ head)
+        Cách 3: External style (viết bên trong 1 file .css và nhúng vào file .html, sử dụng thể link)
+        short hand: viết tắt, rút gọn
+        display block
+        inline 
+        
+        độ ưu tiên:
+        1. CSS mặc định của trình duyệt 
+        < 2. Internal 
+        < 3. External 
+        < 4. Inline
+
+        ! important (đặt sau value của 1 property nào đó), thay đổi thứ tự ưu tiên
+        Compiler Time : biên dịch
+        Run Time: Chạy
+     -->
+    <h1 style="color: white ;
+                background-color: green;
+                font-style: italic;
+                text-decoration: underline;
+                width: 300px;
+                padding: 20px 10px;
+                border-radius: 30px;
+                background-image: linear-gradient(to right, green, yellow, orange);
+                ">
+        CodeGym Huế</h1>
+
+    <p style="color: white;
+            background-color: green;
+            font-style: italic;
+            text-decoration: underline;
+            width: 300px;
+            padding: 20px 10px;
+            border-radius: 30px;
+            background-image: linear-gradient(to right, green, yellow, orange);
+            ">
+        Hello anh em C0322G1
+    </p>
+
+    <h2 id="heading-2">
+        Bootcamp Preparation
+    </h2>
+    <a class="link" target="blank" href="">Link 1</a>
+    <a class="link" href="">Link 2</a>
+    <h4>Heading 4.1</h4>
+    <h5>Heading 5.1</h5>
+</body>
+
+</html>

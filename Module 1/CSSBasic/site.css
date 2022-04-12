@@ -1,0 +1,105 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color: green; */
+}
+html, body{
+
+}
+h1 {
+    color: blue;
+    /* background-color: green; */
+    font-style: italic;
+    text-decoration: underline;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 30px;
+    /* background-image: linear-gradient(to right, green, yellow, orange); */
+}
+
+#heading-2{
+    color: white;
+}
+
+.link{
+    text-decoration: none;
+    color:white;
+    background-color: orange;
+    padding: 15px 20px;
+    font-family: serif;
+}
+
+.link:hover{
+    background-color: darkorange;
+    padding: 14px 19px;
+    box-shadow: 3px 3px gray;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+h4, h5{
+    color:red;
+}
+
+/* input{
+    border: none;
+    outline: none;
+    border-bottom: 1px dashed black;
+} */
+
+input:focus{
+    background-color: gray;
+}
+
+input[type=checkbox]:checked{
+    transform: scale(3);
+}
+
+.link::before{
+    content: "* ";
+    color: green;
+}
+.link::after{
+    content: " (new)";
+    color: red;
+}
+
+/* p::first-letter{
+    font-size: 40px;
+    font-family: monospace;
+} */
+
+p::first-line{
+    font-weight: bold;
+}
+
+p::selection{
+    color: red;
+    background-color: orange;
+}
+h4::first-letter{
+    font-size: 50px;
+}
+
+input[type=text]{
+    border: none;
+    outline: none;
+    border: 10px solid red;
+}
+
+a[target=blank]{
+    text-decoration: underline;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 35px; */
+    /* margin: 10px 35px 20px 15px; */
+    margin: 10px 35px 20px;
+    /* margin: 10px 35px; */
+    /* margin: 10px; */
+}
