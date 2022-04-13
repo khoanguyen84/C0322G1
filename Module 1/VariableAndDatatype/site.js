@@ -1,0 +1,14 @@
+let age = 18;
+console.log(typeof age);
+age = '18';
+console.log(typeof age);
+age = true;
+console.log(typeof age);
+age = null;
+console.log(typeof age);
+age = undefined;
+console.log(typeof age);
+age = {};
+console.log(typeof age);
+age = function(){};
+console.log(typeof age);
