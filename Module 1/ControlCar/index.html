@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control car</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="car" src="images/right.jpg" style="position: relative;
+                top: 0px;
+                left: 0px;
+            ">
+    <!-- <img id="car" src="images/right.jpg"> -->
+
+    <button style="position: fixed;
+                right: 20px;
+                bottom: 20px;" onclick="moveToRight()">Move To Right</button>
+    <!-- <button style="position: fixed;
+                right: 20px;
+                bottom: 20px;">Move To Right</button> -->
+    <script>
+        // Bảng mã ASSCI
+        const step = 10;
+        const arrowRight = 39;
+        const arrowLeft = 37;
+        const keyD = 68;
+        const keyA = 65;
+
+        // document.querySelector('button').addEventListener("click", moveToRight)
+
+        window.addEventListener("keydown", controlCar)
+
+        // function init(){
+        //     let car = document.getElementById('car');
+        //     car.style.position = 'relative';
+        //     car.style.left = 0;
+        //     car.style.top = 0;
+        //}
+        function moveToRight() {
+            let car = document.getElementById('car');
+            car.style.left = parseInt(car.style.left) + step + "px";
+            car.src = "images/right.jpg"
+        }
+        function moveToLeft() {
+            let car = document.getElementById('car');
+            car.style.left = parseInt(car.style.left) - step + "px";
+            car.src = "images/left.jpg"
+        }
+
+        function controlCar(e) {
+            // console.dir(e)
+            // alert(e.keyCode)
+            switch (e.keyCode) {
+                case arrowRight:
+                case keyD:
+                    {
+                        // moveToRight();
+                        let car = document.getElementById('car');
+                        car.style.left = parseInt(car.style.left) + step + "px";
+                        car.src = "images/right.jpg"
+                        break;
+                    }
+                case arrowLeft:
+                case keyA:
+                    {
+                        // moveToLeft();
+                        let car = document.getElementById('car');
+                        car.style.left = parseInt(car.style.left) - step + "px";
+                        car.src = "images/left.jpg"
+                        break;
+                    }
+            }
+        }
+        // init();
+        // window.onload = init;
+    </script>
+</body>
+
+</html>
