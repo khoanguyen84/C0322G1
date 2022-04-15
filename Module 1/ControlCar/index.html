@@ -23,6 +23,8 @@
     <img id="car" src="images/right.jpg" style="position: relative;
                 top: 0px;
                 left: 0px;
+                width: 100px;
+                height: 50px;
             ">
     <!-- <img id="car" src="images/right.jpg"> -->
 
@@ -37,6 +39,8 @@
         const step = 10;
         const arrowRight = 39;
         const arrowLeft = 37;
+        const arrowDown = 40;
+        const arrowUp = 38;
         const keyD = 68;
         const keyA = 65;
 
@@ -52,13 +56,42 @@
         //}
         function moveToRight() {
             let car = document.getElementById('car');
-            car.style.left = parseInt(car.style.left) + step + "px";
-            car.src = "images/right.jpg"
+            car.style.width = "100px";
+            car.style.height = "50px";
+            if (parseInt(car.style.left) + parseInt(car.style.width) + step <= window.innerWidth) {
+                car.style.left = parseInt(car.style.left) + step + "px";
+                car.src = "images/right.jpg"
+            }
         }
         function moveToLeft() {
             let car = document.getElementById('car');
-            car.style.left = parseInt(car.style.left) - step + "px";
-            car.src = "images/left.jpg"
+            car.style.width = "100px";
+            car.style.height = "50px";
+            if (parseInt(car.style.left) - step >=0) {
+                car.style.left = parseInt(car.style.left) - step + "px";
+                car.src = "images/left.jpg"
+            }
+        }
+
+        function moveToDown() {
+            let car = document.getElementById('car');
+            car.style.width = "50px";
+            car.style.height = "100px";
+
+            if (parseInt(car.style.top) + parseInt(car.style.height) + step <= window.innerHeight) {
+                car.style.top = parseInt(car.style.top) + step + "px";
+                car.src = "images/down.jpg"
+            }
+        }
+        function moveToUp() {
+            let car = document.getElementById('car');
+            car.style.width = "50px";
+            car.style.height = "100px";
+
+            if (parseInt(car.style.top) - step >= 0) {
+                car.style.top = parseInt(car.style.top) - step + "px";
+                car.src = "images/top.jpg"
+            }
         }
 
         function controlCar(e) {
@@ -68,19 +101,29 @@
                 case arrowRight:
                 case keyD:
                     {
-                        // moveToRight();
-                        let car = document.getElementById('car');
-                        car.style.left = parseInt(car.style.left) + step + "px";
-                        car.src = "images/right.jpg"
+                        moveToRight();
+                        // let car = document.getElementById('car');
+                        // car.style.left = parseInt(car.style.left) + step + "px";
+                        // car.src = "images/right.jpg"
                         break;
                     }
                 case arrowLeft:
                 case keyA:
                     {
-                        // moveToLeft();
-                        let car = document.getElementById('car');
-                        car.style.left = parseInt(car.style.left) - step + "px";
-                        car.src = "images/left.jpg"
+                        moveToLeft();
+                        // let car = document.getElementById('car');
+                        // car.style.left = parseInt(car.style.left) - step + "px";
+                        // car.src = "images/left.jpg"
+                        break;
+                    }
+                case arrowDown:
+                    {
+                        moveToDown();
+                        break;
+                    }
+                case arrowUp:
+                    {
+                        moveToUp();
                         break;
                     }
             }
