@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="avatar_1" src="images/1.jpg" onclick="changeRandomAvatar_1()" />
+    <img id="avatar_2" src="images/3.jpg" onclick="changeRandomAvatar_2()" />
+    <br>
+    <script>
+        function changeRandomAvatar_1() {
+            // random [1,4]
+            // Math.random(): sinh số ngẫu nhiên (0,1)
+            // Math.random()*4: giá trị trong khoảng (0,3)
+            // Math.random()*4 + 1: giá trong khoảng (1,4)
+            // Math.floor: sàn. Ví dụ: 6.99 -> 6 hay 6.01 -> 6
+            // Math.ceil: trần. ví dụ: 6.99 -> 7 hay 6.01 -> 7
+            // Math.floor(Math.random()*4 + 1): giá trong đoạn [1,4]
+            let imageName = Math.floor(Math.random() * 4 + 1);
+            let avatar_1 = document.querySelector('#avatar_1');
+            let avatar_2 = document.querySelector('#avatar_2');
+            avatar_1.src = `images/${imageName}.jpg`;
+            if (avatar_1.src == avatar_2.src) {
+                alert('matching...')
+            }
+        }
+        function changeRandomAvatar_2() {
+            let imageName = Math.floor(Math.random() * 4 + 1);
+            let avatar_1 = document.querySelector('#avatar_1');
+            let avatar_2 = document.querySelector('#avatar_2');
+            avatar_2.src = `images/${imageName}.jpg`;
+            if (avatar_1.src == avatar_2.src) {
+                alert('matching...')
+            }
+        }
+
+        // let count = 0;
+        // for (let number = 1; count <= 30; number++) {
+        //     if (number % 7 == 0) {
+        //         count++;
+        //     }
+        // }
+
+        let count = 0;
+        let number = 1;
+        while (count < 30) {
+            if (number % 7 == 0) {
+                document.write(number + "<br>")
+                count++;
+            }
+            number++;
+        }
+
+    </script>
+</body>
+
+</html>
