@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Statements</title>
+</head>
+
+<body>
+    <!-- <ol>
+        <li>Heading 1
+            <ul>
+                <li>Heading 1.1</li>
+                <li>Heading 1.2</li>
+                <li>Heading 1.3</li>
+            </ul>
+        </li>
+        <li>Heading 2
+            <ul>
+                <li>Heading 2.1</li>
+                <li>Heading 2.2</li>
+                <li>Heading 2.3</li>
+            </ul>
+        </ol>
+    </li> -->
+    <script>
+        let heading = 10;
+        let sub_heading = 7
+        let list = "<ol>";
+        for(let i=1; i <= heading; i++){
+            list += `<li>Heading ${i}`;
+                list += "<ul>";
+                for(let j = 1; j <= sub_heading; j++){
+                    list += `<li>Heading ${i}.${j}</li>`
+                }
+                list += "</ul>"
+            list += '</li>'
+        }
+        list += "</ol>"
+        console.log(list)
+        document.write(list);
+        // let n = Number(prompt("Enter number: "));
+        // for (; n != 0 ;) {
+        //     // if(n == 0){
+        //     //     break;
+        //     // }
+        //     document.write(`${n} <br>`);
+        //     n = Number(prompt("Enter number: "));
+        // }
+    </script>
+</body>
+
+</html>
