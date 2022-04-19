@@ -6,56 +6,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img{
+            width: 800px;
+            height: 160px;
+        }
+    </style>
 </head>
 
 <body>
-    <img id="avatar_1" src="images/1.jpg" onclick="changeRandomAvatar_1()" />
-    <img id="avatar_2" src="images/3.jpg" onclick="changeRandomAvatar_2()" />
-    <br>
+    <table>
+        <tr>
+            <td>
+                <img id="image_1" onclick="changeRandomImage_1()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="image_2" onclick="changeRandomImage_2()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="image_3" onclick="changeRandomImage_3()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="image_4" onclick="changeRandomImage_4()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="image_5" onclick="changeRandomImage_5()" />
+            </td>
+        </tr>
+    </table>
+    
     <script>
-        function changeRandomAvatar_1() {
-            // random [1,4]
-            // Math.random(): sinh số ngẫu nhiên (0,1)
-            // Math.random()*4: giá trị trong khoảng (0,3)
-            // Math.random()*4 + 1: giá trong khoảng (1,4)
-            // Math.floor: sàn. Ví dụ: 6.99 -> 6 hay 6.01 -> 6
-            // Math.ceil: trần. ví dụ: 6.99 -> 7 hay 6.01 -> 7
-            // Math.floor(Math.random()*4 + 1): giá trong đoạn [1,4]
-            let imageName = Math.floor(Math.random() * 4 + 1);
-            let avatar_1 = document.querySelector('#avatar_1');
-            let avatar_2 = document.querySelector('#avatar_2');
-            avatar_1.src = `images/${imageName}.jpg`;
-            if (avatar_1.src == avatar_2.src) {
-                alert('matching...')
-            }
-        }
-        function changeRandomAvatar_2() {
-            let imageName = Math.floor(Math.random() * 4 + 1);
-            let avatar_1 = document.querySelector('#avatar_1');
-            let avatar_2 = document.querySelector('#avatar_2');
-            avatar_2.src = `images/${imageName}.jpg`;
-            if (avatar_1.src == avatar_2.src) {
-                alert('matching...')
-            }
-        }
+        let image_1 = document.querySelector('#image_1');
+        let image_2 = document.querySelector('#image_2');
+        let image_3 = document.querySelector('#image_3');
+        let image_4 = document.querySelector('#image_4');
+        let image_5 = document.querySelector('#image_5');
 
-        // let count = 0;
-        // for (let number = 1; count <= 30; number++) {
-        //     if (number % 7 == 0) {
-        //         count++;
+        let win_1 = "http://127.0.0.1:5500/images/1.jpghttp://127.0.0.1:5500/images/4.jpghttp://127.0.0.1:5500/images/7.jpghttp://127.0.0.1:5500/images/10.jpghttp://127.0.0.1:5500/images/13.jpg";
+        let win_2 = "http://127.0.0.1:5500/images/2.jpghttp://127.0.0.1:5500/images/5.jpghttp://127.0.0.1:5500/images/8.jpghttp://127.0.0.1:5500/images/11.jpghttp://127.0.0.1:5500/images/14.jpg";
+        let win_3 = "http://127.0.0.1:5500/images/3.jpghttp://127.0.0.1:5500/images/6.jpghttp://127.0.0.1:5500/images/9.jpghttp://127.0.0.1:5500/images/12.jpghttp://127.0.0.1:5500/images/15.jpg";
+        // let win_1 = "1.jpg4.jpg7.jpg10.jpg13.jpg";
+        // let win_2 = "2.jpg5.jpg8.jpg11.jpg14.jpg";
+        // let win_3 = "3.jpg6.jpg9.jpg12.jpg15.jpg";
+
+        image_1.src = `images/${Math.floor(Math.random()*(3 - 1 + 1) + 1)}.jpg`;
+        image_2.src = `images/${Math.floor(Math.random()*(6 - 4 + 1) + 4)}.jpg`;
+        image_3.src = `images/${Math.floor(Math.random()*(9 - 7 + 1) + 7)}.jpg`;
+        image_4.src = `images/${Math.floor(Math.random()*(12 - 10 + 1) + 10)}.jpg`;
+        image_5.src = `images/${Math.floor(Math.random()*(15 - 13 + 1) + 13)}.jpg`;
+
+        let checkWin = "";
+
+        function changeRandomImage_1(){
+            image_1.src = `images/${Math.floor(Math.random()*(3 - 1 + 1) + 1)}.jpg`;
+            // checkWin = image_1.src.split("/").pop() + image_2.src.split("/").pop()+ image_3.src.split("/").pop() + image_4.src.split("/").pop() + image_5.src.split("/").pop();
+            checkWin = image_1.src + image_2.src + image_3.src + image_4.src + image_5.src;
+            console.log(checkWin)
+            if(checkWin == win_1 || checkWin == win_2 || checkWin == win_3){
+                alert("Completed")
+            }
+        }
+        function changeRandomImage_2(){
+            image_2.src = `images/${Math.floor(Math.random()*(6 - 4 + 1) + 4)}.jpg`;
+            checkWin = image_1.src + image_2.src + image_3.src + image_4.src + image_5.src;
+            console.log(checkWin)
+            if(checkWin == win_1 || checkWin == win_2 || checkWin == win_3){
+                alert("Completed")
+            }
+        }
+        function changeRandomImage_3(){
+            image_3.src = `images/${Math.floor(Math.random()*(9 - 7 + 1) + 7)}.jpg`;
+            checkWin = image_1.src + image_2.src + image_3.src + image_4.src + image_5.src;
+            console.log(checkWin)
+            if(checkWin == win_1 || checkWin == win_2 || checkWin == win_3){
+                alert("Completed")
+            }
+        }
+        function changeRandomImage_4(){
+            image_4.src = `images/${Math.floor(Math.random()*(12 - 10 + 1) + 10)}.jpg`;
+            checkWin = image_1.src + image_2.src + image_3.src + image_4.src + image_5.src;
+            console.log(checkWin)
+            if(checkWin == win_1 || checkWin == win_2 || checkWin == win_3){
+                alert("Completed")
+            }
+        }
+        function changeRandomImage_5(){
+            image_5.src = `images/${Math.floor(Math.random()*(15 - 13 + 1) + 13)}.jpg`;
+            checkWin = image_1.src + image_2.src + image_3.src + image_4.src + image_5.src;
+            console.log(checkWin)
+            if(checkWin == win_1 || checkWin == win_2 || checkWin == win_3){
+                alert("Completed")
+            }
+        }
+        // function changeRandomAvatar_1() {
+        //     // random [1,4] ~ min = 1; max = 4
+        //     // Math.floor(Math.random()*(max - min + 1) + min)
+
+        //     // Math.random(): sinh số ngẫu nhiên (0,1)
+        //     // Math.random()*4: giá trị trong khoảng (0,3)
+        //     // Math.random()*4 + 1: giá trong khoảng (1,4)
+        //     // Math.floor: sàn. Ví dụ: 6.99 -> 6 hay 6.01 -> 6
+        //     // Math.ceil: trần. ví dụ: 6.99 -> 7 hay 6.01 -> 7
+        //     // Math.floor(Math.random()*4 + 1): giá trong đoạn [1,4]
+        //     let imageName = Math.floor(Math.random() * 4 + 1);
+        //     let avatar_1 = document.querySelector('#avatar_1');
+        //     let avatar_2 = document.querySelector('#avatar_2');
+        //     avatar_1.src = `images/${imageName}.jpg`;
+        //     if (avatar_1.src == avatar_2.src) {
+        //         alert('matching...')
+        //     }
+        // }
+        // function changeRandomAvatar_2() {
+        //     let imageName = Math.floor(Math.random() * 4 + 1);
+        //     let avatar_1 = document.querySelector('#avatar_1');
+        //     let avatar_2 = document.querySelector('#avatar_2');
+        //     avatar_2.src = `images/${imageName}.jpg`;
+        //     if (avatar_1.src == avatar_2.src) {
+        //         alert('matching...')
         //     }
         // }
 
-        let count = 0;
-        let number = 1;
-        while (count < 30) {
-            if (number % 7 == 0) {
-                document.write(number + "<br>")
-                count++;
-            }
-            number++;
-        }
+        // // let count = 0;
+        // // for (let number = 0; count <= 30; number++) {
+        // //     if (number % 7 == 0) {
+        // //         count++;
+        // //     }
+        // // }
 
+        // let count = 0;
+        // let number = 1;
+        // while (count < 30) {
+        //     if (number % 7 == 0) {
+        //         document.write(number + "<br>")
+        //         count++;
+        //     }
+        //     number++;
+        // }
+
+        // var: phạm vi global, biến được khai báo 1 lần, những lần sau thì sử dụng lại vùng nhớ
+        // let: phim vi local (block code), tồn tại trong phạm local (block code)
+        // const: phải có giá trị khởi tạo và không được gán lại
     </script>
 </body>
 
