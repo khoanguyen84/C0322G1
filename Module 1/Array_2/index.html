@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+
+<body>
+    <h1></h1>
+    <ol></ol>
+    <script src="array_method.js"></script>
+    <script>
+        let jobs = ["Chùi nhà", "Lau nhà", "Quét nhà", "Nấu cơm", "Cho con bú"];
+        // let jobs = ["<li>Chùi nhà</li>", "<li>Lau nhà</li>", "<li>Quét nhà</li>", "<li>Nấu cơm</li>", "<li>Cho con bú</li>"];
+        let ul = document.querySelector('ol');
+        // jobs.forEach(function(job){
+        //     ul.innerHTML += `<li>${job}</li>`
+        // })
+        let htmls = jobs.map(function(job){
+            return `<li>${job}</li>`
+        })
+        console.log(htmls.join(""))
+        ul.innerHTML = htmls.join("");
+    </script>
+</body>
+
+</html>
