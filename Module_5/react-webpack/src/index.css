@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+.container{
+    width: 900px;
+    margin: 0px auto;
+}
+
+.header{
+    background-color:green;
+}
+
+.content{
+    background-color: orange;
+}
+
+.footer{
+    background-color: pink;
+}

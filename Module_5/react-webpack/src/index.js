@@ -1,10 +1,18 @@
 import React from "react";
-import ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
+import Content from "./component/Content";
+import Header from './component/Header';
+import Footer from './component/Footer';
+import './index.css';
 
 // function component
-function App(){
+function App() {
     return (
-        <h1>Webpack React Function Component</h1>
+        <div className="container">
+            <Header/>
+            <Content/>
+            <Footer/>
+        </div>
     )
 }
 // class component
@@ -17,4 +25,4 @@ function App(){
 // }
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
-root.render(<App/>);
+root.render(<App />);
