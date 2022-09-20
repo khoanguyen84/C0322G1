@@ -21,3 +21,24 @@
 .footer{
     background-color: pink;
 }
+
+.job-list{
+    width: 200px;
+    margin-left: 30px;
+}
+
+.job-list ul li{
+    border-bottom: 1px dotted orange;
+    padding: 5px 0px;
+
+}
+.job-list ul{
+    list-style: none;
+}
+
+.remove-job{
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 10px;
+}
