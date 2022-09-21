@@ -6,6 +6,7 @@ import Footer from './component/Footer';
 import './index.css';
 import Job from './component/Job';
 import JobUseForm from './component/JobUseForm';
+import Main from './component/Main';
 
 // function component
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <div className="container">
             <Header/>
             {/* <Content/> */}
-            <JobUseForm/>
+            {/* <JobUseForm/> */}
+            <Main/>
             <Footer/>
         </div>
     )

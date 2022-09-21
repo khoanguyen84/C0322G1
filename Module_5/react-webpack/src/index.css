@@ -42,3 +42,8 @@
     cursor: pointer;
     margin-left: 10px;
 }
+
+.loading{
+    width: 100px;
+    height: 100px;
+}

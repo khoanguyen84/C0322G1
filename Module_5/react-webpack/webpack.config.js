@@ -17,6 +17,13 @@ module.exports = {
       {
         test: /\.css$/, // Sử dụng style-loader, css-loader cho file .css
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i, 
+        loader: 'file-loader',
+        options: {
+          name: 'src/asset/image/[name].[ext]'
+        }
       }
     ]
   },
